@@ -1,21 +1,28 @@
 package com.example.demo.ioEntity;
 
-import java.io.Serializable;
+public class Student {
+    private String id;
 
-/**
- *
- */
-public class Student implements Serializable {
-    private static final long serialVersionUID = 918185028445359909L;
     private String name;
+
     private String age;
+
+    private String sex;
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id == null ? null : id.trim();
+    }
 
     public String getName() {
         return name;
     }
 
     public void setName(String name) {
-        this.name = name;
+        this.name = name == null ? null : name.trim();
     }
 
     public String getAge() {
@@ -23,14 +30,24 @@ public class Student implements Serializable {
     }
 
     public void setAge(String age) {
-        this.age = age;
+        this.age = age == null ? null : age.trim();
+    }
+
+    public String getSex() {
+        return sex;
+    }
+
+    public void setSex(String sex) {
+        this.sex = sex == null ? null : sex.trim();
     }
 
     @Override
     public String toString() {
         final StringBuilder sb = new StringBuilder("Student{");
-        sb.append("name='").append(name).append('\'');
+        sb.append("id='").append(id).append('\'');
+        sb.append(", name='").append(name).append('\'');
         sb.append(", age='").append(age).append('\'');
+        sb.append(", sex='").append(sex).append('\'');
         sb.append('}');
         return sb.toString();
     }

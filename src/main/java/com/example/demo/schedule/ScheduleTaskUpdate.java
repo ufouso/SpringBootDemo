@@ -7,19 +7,18 @@ import org.springframework.scheduling.TriggerContext;
 import org.springframework.scheduling.annotation.SchedulingConfigurer;
 import org.springframework.scheduling.config.ScheduledTaskRegistrar;
 import org.springframework.scheduling.support.CronTrigger;
-import org.springframework.stereotype.Component;
 
 import java.util.Date;
 
 /**
  *
  *
- * 定时任务动态修改执行时间
+ * 使用SpringTask，定时任务动态修改执行时间，默认是每两秒执行一次。
  * @Author ufo
  * @Date 2019/4/3 10:20
  **/
-@Component
-//@EnableScheduling
+//@Component
+//@EnableScheduling这个注解在项目启动类上就有了，所以不用再次添加了
 public class ScheduleTaskUpdate implements SchedulingConfigurer {
 
     private static final Logger logger = LoggerFactory.getLogger(ScheduleTaskUpdate.class);

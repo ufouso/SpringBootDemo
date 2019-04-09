@@ -4,7 +4,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.scheduling.annotation.Async;
 import org.springframework.scheduling.annotation.Scheduled;
-import org.springframework.stereotype.Component;
 
 /**
  * 这种使用的是SpringTask,无法实现动态修改定时任务的时间设置
@@ -14,7 +13,7 @@ import org.springframework.stereotype.Component;
  * @Author ufo
  * @Date 2019/4/3 10:20
  **/
-@Component
+//@Component
 public class ScheduleTask {
 
     private static final Logger logger = LoggerFactory.getLogger(ScheduleTask.class);
